@@ -1,0 +1,16 @@
+{
+	signal: [
+  		{name: 'clk',  	 wave: 'p.......'},
+        ['slave',
+         	{name: 'ready_s',  wave: '1....0..', node:'.....d.'},
+         	{name: 'valid_s',  wave: '0.1.....', node:'..a...'},
+         	{name: 'dat_s',    wave: 'x.3456..', data: ['dat0', 'dat1', 'dat2', 'dat3']},
+        ],
+  		['master',
+    		{name: 'ready_m',  wave: '1...0...', node: '....c..'},
+    		{name: 'valid_m',  wave: '0..1....', node:'...b...'},
+  			{name: 'dat_m',    wave: 'x..3456.', data: ['dat0', 'dat1', 'dat2', 'dat3']}
+     	]
+	],
+  	edge:['a~>b', 'b~>c', 'c~>d']
+}
